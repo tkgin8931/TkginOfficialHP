@@ -14,13 +14,6 @@ export function ProfileInfo() {
       url: "https://github.com/tkgin8931/",
       username: "@takgin8931",
     },
-    // {
-    //   id: "linkedin",
-    //   icon: Linkedin,
-    //   label: "LinkedIn",
-    //   url: "https://linkedin.com/in/yourprofile",
-    //   username: "/in/yourprofile",
-    // },
     {
       id: "email",
       icon: Mail,
@@ -50,7 +43,7 @@ export function ProfileInfo() {
 
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">takgin</h1>
             <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto text-pretty">
-              A student studying web development, mobile app development, server construction, machine learning, embedded systems, and electronics.
+              A student studying web development.
             </p>
 
             <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-8">

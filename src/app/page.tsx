@@ -1,4 +1,4 @@
-import { AudioHeroSection } from "./components/audio-hero-section"
+import { AudioHeroSection } from "./components/hero-section"
 import { ProfileInfo } from "./components/profile-info"
 import { ExperienceTimeline } from "./components/experience-timeline"
 // import { ProjectsShowcase } from "./components/projects-showcase"
