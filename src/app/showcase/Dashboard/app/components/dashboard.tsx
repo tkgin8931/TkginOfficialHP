@@ -100,15 +100,11 @@ export default function DashBorad() {
 
 
     return (
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-4 text-black">
             <div className="flex flex-col gap-6">
                 <div className="flex items-center justify-between">
-                    <div>
-                        <h1 className="text-3xl font-bold tracking-tight">DeviceSensorSocket</h1>
-                        <p className="text-muted-foreground">by Tagi</p>
-                    </div>
                     <div className="flex items-center gap-4">
-                        <div className="text-sm text-muted-foreground flex items-center gap-2">
+                        <div className="text-sm text-muted-foreground flex items-center gap-2 text-yellow-400">
                             <Clock className="h-4 w-4"/>
                             最終更新:{lastUpdate || "データ待機中"}
                         </div>
@@ -119,8 +115,8 @@ export default function DashBorad() {
                 {connectionStatus === "disconnected" && (
                     <Alert variant="destructive">
                         <AlertCircle className="h-4 w-4"/>
-                        <AlertTitle>接続エラー</AlertTitle>
-                        <AlertDescription>
+                        <AlertTitle className="text-red-600 font-bold">接続エラー</AlertTitle>
+                        <AlertDescription className="text-red-500">
                             Websocketサーバーに接続できません。
                         </AlertDescription>
                     </Alert>
@@ -301,7 +297,7 @@ export default function DashBorad() {
             <CardDescription>センサーからの未加工データ</CardDescription>
           </CardHeader>
           <CardContent>
-            <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-[300px]">
+            <pre className="bg-gray-100 dark:bg-gray-300 p-4 rounded-md overflow-auto max-h-[300px]">
               {currentData ? JSON.stringify(currentData, null, 2) : "データ待機中..."}
             </pre>
           </CardContent>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Github, Mail, MapPin, Calendar, ExternalLink } from "lucide-react"
+import { Github, Mail, MapPin, Newspaper, ExternalLink } from "lucide-react"
 
 export function ProfileInfo() {
   const [hoveredSocial, setHoveredSocial] = useState<string | null>(null)
@@ -15,17 +15,17 @@ export function ProfileInfo() {
       username: "@takgin8931",
     },
     {
-      id: "email",
-      icon: Mail,
-      label: "Email",
-      url: "mailto:your.email@example.com",
-      username: "tianyiwuliu@gmail.com",
+      id: "blog",
+      icon: Newspaper,
+      label: "Qitta",
+      url: "",
+      username: "takgin",
     },
   ]
 
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-background to-background/95">
+    <section className="relative py-8 bg-gradient-to-b from-background to-background/95">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Profile Header */}
@@ -51,10 +51,10 @@ export function ProfileInfo() {
                 <MapPin className="w-4 h-4" />
                 <span>Science Tokyo, Japan</span>
               </div>
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
                 <span>Available for hire</span>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -68,7 +68,7 @@ export function ProfileInfo() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative p-6 bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl hover:border-accent/50 transition-all duration-300 hover:scale-105"
+                  className="group relative p-6 bg-card/50 bg-white text-black backdrop-blur-sm border border-border/50 rounded-xl hover:border-accent/50 transition-all duration-300 hover:scale-105"
                   onMouseEnter={() => setHoveredSocial(social.id)}
                   onMouseLeave={() => setHoveredSocial(null)}
                 >
@@ -81,7 +81,7 @@ export function ProfileInfo() {
                       <Icon className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-foreground mb-1">{social.label}</h3>
+                      <h3 className="font-semibold text-black mb-1">{social.label}</h3>
                       <p className="text-sm text-muted-foreground">{social.username}</p>
                     </div>
                     <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-accent transition-colors" />

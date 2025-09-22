@@ -33,9 +33,9 @@ export function AudioEquipmentCard({
       className={cn(
         "relative group cursor-pointer transition-all duration-300 ease-out",
         "bg-card/80 backdrop-blur-sm rounded-lg p-6",
-        "border-2 border-transparent",
-        "hover:border-border hover:bg-card/90",
-        "hover:scale-105 hover:shadow-xl",
+        "border-2 border-white/80",
+        "hover:border-border",
+        "hover:scale-105",
         isSelected && "bg-accent border-accent shadow-2xl shadow-accent/20",
         isSelected && "text-accent-foreground",
         className,
@@ -80,14 +80,14 @@ export function AudioEquipmentCard({
       )}
 
       {/* Hover Glow Effect */}
-      <div
+      {/* <div
         className={cn(
           "absolute inset-0 rounded-lg transition-opacity duration-300",
           "bg-gradient-to-br from-primary/10 to-accent/10",
           "opacity-0 group-hover:opacity-100",
           isSelected && "opacity-30",
         )}
-      />
+      /> */}
     </div>
   )
 }
